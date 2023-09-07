@@ -523,7 +523,7 @@ h2 {
   }
 }
 
-@media (max-width:391px) {
+@media (max-width:375px) {
   #p2-lft {
     display: none;
   }
