@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>weather-app</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="main">
+    <div id="cursor"></div>
+    <div id="outer-nav">
+      <h4><a href="#page1">home</a></h4>
+      <h4><a href="#page2">features</a></h4>
+      <h4><a href="#page3">about</a></h4>
+      <h4><a href="#page3">connect us</a></h4>
+    </div>
+    <nav id="nav-bar">
+      <div id="lft-img">
+        <span>Weather App</span>&nbsp;
+        <img src="weather-app.png" alt="">
+      </div>
+      <div id="cnt-nav">
+        <h4><a href="#page1">home</a></h4>
+        <h4><a href="#page2">features</a></h4>
+        <h4><a href="#page3">about</a></h4>
+        <h4><a href="#page3">connect us</a></h4>
+      </div>
+      <div id="rgt-nav">
+        <div id="time">
+          <div id="display-time"></div>
+        </div>
+      </div>
+      <div id="menu-bar">
+        <i class="ri-menu-line"></i>
+      </div>
+    </nav>
+    <div id="page1">
+      <div id="card" data-tilt>
+        <div id="header">
+          <div id="search-box">
+            <input type="text" placeholder="Enter city name" id="input-box">
+
+            <button id="searchBtn"><i class="ri-search-line"></i></button>
+          </div>
+        </div>
+
+        <div id="location-not-found">
+          <h1>Sorry, Location not found!!!</h1>
+          <img src="/images/404.png" alt="404 Error">
+        </div>
+
+
+        <div id="weather-body">
+          <img src="/images/cloud.png" alt="Weather Image" id="weather-img">
+
+          <div id="weather-box">
+            <p id="temperature">-- <sup>°C</sup></p>
+            <p id="description">Weather</p>
+          </div>
+
+          <div id="weather-details">
+            <div id="humidity">
+              <i id="fa-sharp fa-solid fa-droplet"></i>
+              <div id="text">
+                <span id="humidity1">--%</span>
+                <p>Humidity</p>
+              </div>
+            </div>
+
+            <div id="wind">
+              <i id="fa-solid fa-wind"></i>
+              <div id="text">
+                <span id="wind-speed">-- Km/H</span>
+                <p>Wind Speed</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="page2">
+      <div id="p2-lft">
+        <div class="table-wrapper">
+          <table class="fl-table">
+            <thead>
+              <tr>
+                <th>Header 1</th>
+                <th>Header 2</th>
+                <th>Header 3</th>
+                <th>Header 4</th>
+                <th>Header 5</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Content 1</td>
+                <td>Content 1</td>
+                <td>Content 1</td>
+                <td>Content 1</td>
+                <td>Content 1</td>
+              </tr>
+              <tr>
+                <td>Content 2</td>
+                <td>Content 2</td>
+                <td>Content 2</td>
+                <td>Content 2</td>
+                <td>Content 2</td>
+              </tr>
+              <tr>
+                <td>Content 3</td>
+                <td>Content 3</td>
+                <td>Content 3</td>
+                <td>Content 3</td>
+                <td>Content 3</td>
+              </tr>
+              <tr>
+                <td>Content 4</td>
+                <td>Content 4</td>
+                <td>Content 4</td>
+                <td>Content 4</td>
+                <td>Content 4</td>
+              </tr>
+              <tr>
+                <td>Content 5</td>
+                <td>Content 5</td>
+                <td>Content 5</td>
+                <td>Content 5</td>
+                <td>Content 5</td>
+              </tr>
+              <tr>
+                <td>Content 6</td>
+                <td>Content 6</td>
+                <td>Content 6</td>
+                <td>Content 6</td>
+                <td>Content 6</td>
+              </tr>
+            <tbody>
+          </table>
+        </div>
+      </div>
+      <div id="p2-rgt">
+        <div id="card2" data-tilt>
+          <form onsubmit="calculateTemp(); return false">
+            <label for="">Enter Temperature in Degree</label>
+            <input type="number" name="temp" id="temp">
+            <br>
+            <label for="">Select</label>
+            <br>
+            <select name="Convert to" id="convert">
+              <option value="cel">Celcius</option>
+              <option value="feh">Fahrenheit</option>
+            </select>
+            <br>
+            <label for="">It Converts Celcius to Fahrenheit and Vice versa<label>
+                <br>
+                <input id="sub_btn" name="temp" type="submit">
+          </form>
+          <div id="ans">
+            <h1></h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="page3">
+      <h1>Our team members</h1>
+      <div class="card" data-tilt>
+        <div id="info">
+          <div class="profile-pic" id="pic1"></div>
+          <h3>Adarsh Singh Chauhan</h3>
+          <span>Web Developer</span>
+        </div>
+        <div id="skills">
+          <h4>Branch :- <span style="font-weight: 400;">Cyber Security</span> </h4>
+          <h4>Skills :-</h4>
+          <span>HTML ,CSS ,JavaScript <br> Node js ,Bootstrap ,C-programming</span>
+          <h4>Connect With Me :-</h4>
+          <div class="logo">
+            <i class="ri-linkedin-fill"></i>
+            <i class="ri-meta-fill"></i>
+            <i class="ri-whatsapp-fill"></i>
+          </div>
+        </div>
+      </div>
+      <div class="card" data-tilt>
+        <div id="info">
+          <div class="profile-pic" id="pic2"></div>
+          <h3>Aditya Singh Chauhan</h3>
+          <span>Web Developer</span>
+        </div>
+        <div id="skills">
+          <h4>Branch :- <span style="font-weight: 400;">Cyber Security</span> </h4>
+          <h4>Skills :-</h4>
+          <span>HTML ,CSS ,JavaScript <br> Node js ,Bootstrap </span>
+          <h4>Connect With Me :-</h4>
+          <div class="logo">
+            <i class="ri-linkedin-fill"></i>
+            <i class="ri-meta-fill"></i>
+            <i class="ri-whatsapp-fill"></i>
+          </div>
+        </div>
+      </div>
+      <div class="card" data-tilt>
+        <div id="info">
+          <div class="profile-pic" id="pic3"></div>
+          <h3>Abhishek Kumar</h3>
+          <span>Java Developer</span>
+        </div>
+        <div id="skills">
+          <h4>Branch :- <span style="font-weight: 400;">Cyber Security</span> </h4>
+          <h4>Skills :-</h4>
+          <span>HTML , <br>CSS ,Java<br> </span>
+          <h4>Connect With Me :-</h4>
+          <div class="logo">
+            <i class="ri-linkedin-fill"></i>
+            <i class="ri-meta-fill"></i>
+            <i class="ri-whatsapp-fill"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"
+    integrity="sha512-wC/cunGGDjXSl9OHUH0RuqSyW4YNLlsPwhcLxwWW1CR4OeC2E1xpcdZz2DeQkEmums41laI+eGMw95IJ15SS3g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
