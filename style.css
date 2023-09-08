@@ -523,7 +523,13 @@ h2 {
   }
 }
 
-@media (max-width:375px) {
+@media (max-width:376px) ,(max-width:415px){
+
+  #menu-bar i {
+    display: initial;
+    cursor: pointer;
+  }
+
   #p2-lft {
     display: none;
   }
